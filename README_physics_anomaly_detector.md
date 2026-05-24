@@ -76,5 +76,4 @@ and runs progressively hotter.
 
 ## 👤 Author
 
-Ioannis Ntontis | Physics Graduate
-[LinkedIn](your-linkedin-url) | [GitHub](your-github-url)
+Ioannis Ntontis | Physics Graduate | [LinkedIn](https://www.linkedin.com/in/intontis/) | [GitHub](https://www.linkedin.com/in/intontis/)
