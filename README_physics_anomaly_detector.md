@@ -58,10 +58,12 @@ sensor readings from 100 turbofan engines.
 
 ### 4. Key Finding
 
-The top 15 features include both raw sensor readings and their 
+-The top 15 features include both raw sensor readings and their 
 rolling averages — confirming that degradation trends predict 
 failure more accurately than instantaneous readings alone.
-Sensor 11 (fan exit temperature) remains the dominant predictor.
+-The rolling average of sensor 4 (turbine pressure) emerged as the 
+strongest predictor — confirming that smoothed degradation trends 
+outperform raw instantaneous readings for failure prediction.
 
 ![Feature Importance](results/feature_importance.png)
 
