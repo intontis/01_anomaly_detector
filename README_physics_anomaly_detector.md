@@ -73,11 +73,3 @@ and runs progressively hotter.
 ## 📂 Dataset
 
 [NASA CMAPSS Turbofan Engine Degradation Dataset](https://www.kaggle.com/datasets/behrad3d/nasa-cmaps)
-
-## 👤 Author
-
-<<<<<<< HEAD
-Ioannis Ntontis | Physics Graduate | [LinkedIn](https://www.linkedin.com/in/intontis/) | [GitHub](https://www.linkedin.com/in/intontis/)
-=======
-Ioannis Ntontis | Physics Graduate | [LinkedIn](https://www.linkedin.com/in/intontis/) | [GitHub](https://github.com/intontis)
->>>>>>> b0ff50501e29f879847d41c174b92d6ed8399c73
