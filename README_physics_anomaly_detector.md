@@ -23,11 +23,12 @@ sensor readings from 100 turbofan engines.
 ## 📁 Project Structure
 
 ```
-physics-anomaly-detector/
+01_anomaly_detector/
 ├── data/                   ← NASA CMAPSS dataset
 ├── notebooks/
-│   └── 01_explore_data.ipynb   ← Full analysis pipeline
+│   └── physics_anomaly_detector.ipynb  ← Full analysis pipeline
 ├── results/
+│   ├── engine1_sensor2.png
 │   ├── engine1_all_sensors.png
 │   ├── feature_importance.png
 │   └── predictions_vs_actual.png
@@ -44,7 +45,8 @@ physics-anomaly-detector/
 
 ### 2. Feature Engineering
 
-- Calculated **Remaining Useful Life (RUL)** as the target variable
+- Calculated **Remaining Useful Life (RUL)** using pandas `transform` 
+  for efficient per-engine computation
 - Added **10-cycle rolling averages** per sensor to smooth noise 
   and capture degradation trends — analogous to a low-pass filter 
   in signal processing
@@ -56,10 +58,10 @@ physics-anomaly-detector/
 
 ### 4. Key Finding
 
-Sensor 11 (fan exit temperature) was the strongest predictor of 
-engine failure with ~40% feature importance — consistent with 
-thermodynamic theory, as a degrading turbofan loses efficiency 
-and runs progressively hotter.
+- The top 15 features include both raw sensor readings and their 
+rolling averages — confirming that degradation trends predict 
+failure more accurately than instantaneous readings alone.
+- The rolling average of sensor 4 (turbine pressure) emerged as the strongest predictor — confirming that smoothed degradation trends outperform raw instantaneous readings for failure prediction.
 
 ![Feature Importance](results/feature_importance.png)
 
@@ -72,8 +74,4 @@ and runs progressively hotter.
 
 ## 📂 Dataset
 
-<<<<<<< HEAD
 [NASA CMAPSS Turbofan Engine Degradation Dataset](https://www.kaggle.com/datasets/behrad3d/nasa-cmaps)
-=======
-[NASA CMAPSS Turbofan Engine Degradation Dataset](https://www.kaggle.com/datasets/behrad3d/nasa-cmaps)
->>>>>>> ead215c3b89071e684e8f5e686946f0117b522bb
